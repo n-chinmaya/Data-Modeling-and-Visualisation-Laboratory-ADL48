@@ -6,9 +6,6 @@ def perform_operation(num1, num2, choice):
   elif choice == 3:
     return num1 * num2
   elif choice == 4:
-    if num2 == 0:
-      return "Error: Cannot divide by zero"
-    else:
       return num1 / num2
   else:
     return "Invalid choice"
