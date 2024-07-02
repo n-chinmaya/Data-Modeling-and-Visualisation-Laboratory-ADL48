@@ -14,7 +14,7 @@ def binarySearch(arr, key):
   return -1
 arr = [2, 3, 4, 10, 40]
 key = 10
-result = binarySearch(arr, key1)
+result = binarySearch(arr, key)
 if result != -1:
   print("Element", key, "is present at index", str(result))
 else:
