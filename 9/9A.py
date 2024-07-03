@@ -1,28 +1,34 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-data = pd.read_csv('your_dataset.csv')
-scatter_column = 'column_name'
-plt.figure(figsize=(10, 6))  # Adjust figure size as needed
 
-# Generate random colors for each data point
-colors = plt.cm.get_cmap('tab20')(np.linspace(0, 1, len(data)))
+# Read the dataset
+data = {'Name': ['John', 'Anna', 'Peter', 'Linda'],
+        'Age': [28, 24, 35, 32],
+        'Score': [85, 90, 78, 92]}
+df = pd.DataFrame(data)
 
-# Create the scatter plot with custom colors
-plt.scatter(data['index_column'], data[scatter_column], c=colors)  # Replace 'index_column' with your index if needed
-plt.xlabel('Index')  # Replace 'Index' with actual column name if using a custom index
-plt.ylabel(scatter_column)
-plt.title('Scatter Plot of {}'.format(scatter_column))
+# i. Visualize the dataset using plot()
+print("Dataset:")
+print(df)
+
+# ii. Draw the Scatter plot for the dataset on any column
+plt.scatter(df['Age'], df['Score'])
+plt.xlabel('Age')
+plt.ylabel('Score')
+plt.title('Scatter Plot of Age vs Score')
 plt.show()
-# Choose a column for histogram (replace 'column_name' with your desired column)
-histogram_column = 'column_name'
 
-# Histogram
-plt.figure(figsize=(8, 5))
-plt.hist(data[histogram_column], bins=10, edgecolor='black')  # Adjust bin count as needed
-plt.xlabel(histogram_column)
+# iii. Display the scatter plot with different colors
+colors = ['red', 'green', 'blue', 'yellow']
+plt.scatter(df['Age'], df['Score'], c=colors)
+plt.xlabel('Age')
+plt.ylabel('Score')
+plt.title('Scatter Plot of Age vs Score with different colors')
+plt.show()
+
+# iv. Draw the Histogram for the dataset on any column
+plt.hist(df['Score'], bins=5)
+plt.xlabel('Score')
 plt.ylabel('Frequency')
-plt.title('Histogram of {}'.format(histogram_column))
+plt.title('Histogram of Scores')
 plt.show()
-
-print("Visualizations generated successfully!")
-
