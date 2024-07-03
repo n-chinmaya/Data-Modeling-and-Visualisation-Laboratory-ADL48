@@ -2,7 +2,7 @@
 def create_text_file():
     file = open("user_text.txt", "w")
     x=int(input("Enter the number of lines (5-6): "))
-    for i in range():
+    for i in range(x):
         text = input("Enter line " + str(i+1) + ": ")
         file.write(text + "\n")
     file.close()
