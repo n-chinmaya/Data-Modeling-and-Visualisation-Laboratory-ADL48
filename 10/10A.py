@@ -1,29 +1,23 @@
-def handle_exceptions():
-  # NameError
-  try:
-    print(undefined_variable)  # This variable is not defined, causing NameError
-  except NameError:
-    print("NameError: Variable 'undefined_variable' is not defined.")
-  # IndexError
-  try:
-    my_list = [1, 2, 3]
-    print(my_list[5])  # Accessing an out-of-bounds index
-  except IndexError:
-    print("IndexError: List index out of range.")
-  # KeyError
-  try:
-    my_dict = {"name": "Alice"}
-    print(my_dict["age"])  # Accessing a non-existent key
-  except KeyError:
-    print("KeyError: Key 'age' not found in the dictionary.")
-  # ZeroDivisionError
-  try:
-    result = 10 / 0
-  except ZeroDivisionError:
-    print("ZeroDivisionError: Cannot divide by zero.")
+try:
+    a = 20 / 0
+except ZeroDivisionError:
+    print("division by 0 not allowed")
 
-# Call the function to demonstrate exception handling
-handle_exceptions()
+try:
+    print(a)
+except NameError:
+    print("Name error")
+
+try:
+    i = [1, 2, 3]
+    print(i[49])
+except IndexError:
+    print("Index error")
+
+try:
+    d = {'a': 1, 'b': 2}
+    print(d['f'])
+except KeyError:
+    print("Key Error")
 
 print("\nAll exceptions handled successfully!")
-
