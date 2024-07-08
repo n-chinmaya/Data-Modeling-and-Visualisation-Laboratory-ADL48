@@ -9,7 +9,7 @@ def count_characters(file_name):
 def main():
     file_name = "user_input.txt"
     with open(file_name, 'w') as file:
-        x=int(input("Enter the numner of lines (5-6): "))
+        x=int(input("Enter the number of lines (5-6): "))
         print("Enter 5-6 lines of text:")
         for i in range(x):
             line = input("> ")
