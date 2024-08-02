@@ -1,22 +1,27 @@
-def perform_operation(num1, num2, choice):
-  if choice == 1:
-    return num1 + num2
-  elif choice == 2:
-    return num1 - num2
-  elif choice == 3:
-    return num1 * num2
-  elif choice == 4:
-      return num1 / num2
-  else:
-    return "Invalid choice"
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
 
-def main():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    print("Choose operation (1-Add, 2-Subtract, 3-Multiply, 4-Divide): ")
-    choice = int(input())
-    result = perform_operation(num1, num2, choice)
-    print(result)
+choice = int(input("Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division"))
 
-if __name__ == "__main__":
-  main()
+if choice == 1:
+    print("Addition of two numbers is: ", a+b)
+elif choice == 2:
+    print("Subtraction of two numbers is: ", a-b)
+elif choice == 3:
+    print("Multiplication of two numbers is: ", a*b)
+elif choice == 4:
+    print("Division of two numbers is: ", a/b)
+else:
+    print("Invalid choice")
+
+# match choice:
+#     case 1:
+#         print("Addition of two numbers is: ", a+b)
+#     case 2:
+#         print("Subtraction of two numbers is: ", a-b)
+#     case 3:
+#         print("Multiplication of two numbers is: ", a*b)
+#     case 4:
+#         print("Division of two numbers is: ", a/b)
+#     case _:
+#         print("Invalid choice")
