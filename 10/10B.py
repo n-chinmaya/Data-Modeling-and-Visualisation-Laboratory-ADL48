@@ -16,13 +16,7 @@ print("\nDataset information:\n", data.info())
 # Display value overview of each column (descriptive statistics)
 print("\nValue overview of each column:\n", data.describe())
 
-# Visualize the dataset using scatter plots (replace 'column1' and 'column2' with your desired columns)
-plt.figure(figsize=(10, 6))
-plt.scatter(data['column1'], data['column2'])
-plt.xlabel('column1')
-plt.ylabel('column2')
-plt.title('Scatter Plot of {} vs. {}'.format('column1', 'column2'))
+data.plot()
 plt.show()
 
 print("\nVisualizations generated successfully!")
-
