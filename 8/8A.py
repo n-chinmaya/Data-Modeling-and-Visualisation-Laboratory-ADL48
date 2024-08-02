@@ -1,19 +1,13 @@
 import random
 
-# Generate 20 random numbers
-random_numbers = []
-for _ in range(20):
-    num = random.randint(1, 100)
-    random_numbers.append(num)
+numbers = []
 
-print("Random numbers:")
-print(random_numbers)
+for i in range(20):
+    numbers.append(random.randint(1, 10000))
 
-# Filter odd numbers with 2 or 4 digits
-odd_numbers = []
-for num in random_numbers:
-    if num % 2 != 0 and len(str(num)) in (2,4):
-        odd_numbers.append(num)
+print("Random numbers: ", numbers)
 
-print("\nOdd numbers with 2 or 4 digits:")
-print(odd_numbers)
+print("Odd numbers of length 2 and 4: ", end="")
+for number in numbers:
+    if number % 2 != 0 and len(str(number)) in [2, 4]:
+        print(number, end = " ")
