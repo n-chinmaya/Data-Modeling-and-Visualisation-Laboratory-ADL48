@@ -1,23 +1,14 @@
-def divide(numerator, denominator):
+def divide(nu, de):
   try:
-    result = numerator / denominator
-  except ZeroDivisionError:
-    print("Error: Cannot divide by zero.")
-  except (TypeError, ValueError):
-    print("Error: Invalid input types. Please enter numbers for both numerator and denominator.")
-  else:
-    print("Division successful.")
-    return result
+    result = nu/de
+  except ZeroDivisionError :
+      print("Error Division by zero")
+  else: 
+    result = nu/de
+    print("Result: ", result)
   finally:
-    print("This is always executed, regardless of exceptions.")
+    print("End of program")
 
-try:
-  divide(10, 2)  # Successful division
-  divide(10, 0)  # ZeroDivisionError
-  divide("hello", 2)  # ValueError (type mismatch)
-  divide(10, None)  # ValueError (None type)
-except Exception as e:  # Catch any unhandled exceptions
-  print("Unexpected error:", e)
-
-print("\nAll test cases completed.")
-
+print(divide(5, 0))
+print(divide(5, 2))
+  
